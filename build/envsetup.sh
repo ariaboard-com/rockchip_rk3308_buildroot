@@ -1,4 +1,4 @@
-DEFCONFIG_ARRAY=("asclepius_rk3308_release" "asclepius_rk3308_recovery" "asclepius_rk3308_pcba" \
+DEFCONFIG_ARRAY=("novotech_rk3308_release" "novotech_rk3308_recovery" "novotech_rk3308_pcba" \
     "rockchip_rk3308_release" "rockchip_rk3308_32_release" "rockchip_rk3308_32_debug" \
     "rockchip_rk3308_pcba" "rockchip_rk3308_recovery" \
     "rockchip_rk3326" "rockchip_rk3326_recovery" \

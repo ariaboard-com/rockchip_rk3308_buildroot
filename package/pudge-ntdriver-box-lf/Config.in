@@ -1,0 +1,11 @@
+config BR2_PACKAGE_PUDGE_NTDRIVER_BOX_LF
+	bool "Pudge NTDriver Box GUI (Low Floor Version)"
+	select BR2_PACKAGE_LIBPUDGE
+	select BR2_PACKAGE_QT5BASE
+	select BR2_PACKAGE_QT5BASE_GUI
+	select BR2_PACKAGE_PYTHON3
+	select BR2_PACKAGE_PYTHON_PYQT5
+	help
+          GUI for Pudge Driver Box (Low Floor Version) .
+          https://git.g77k.com
+

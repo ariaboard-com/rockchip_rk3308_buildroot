@@ -1,0 +1,10 @@
+config BR2_PACKAGE_PUDGE_SERVER
+	bool "pudge-server"
+	select BR2_PACKAGE_LIBPUDGE
+	select BR2_PACKAGE_LIBLUNAHEARTBEAT
+	select BR2_PACKAGE_UTIL_LINUX_LIBUUID
+	select BR2_PACKAGE_JSON_C
+	help
+	  Luna Pudge Server for driver unicast & broadcast.
+	  https://git.g77k.com
+

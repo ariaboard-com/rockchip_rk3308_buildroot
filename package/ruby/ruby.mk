@@ -4,9 +4,9 @@
 #
 ################################################################################
 
-RUBY_VERSION_MAJOR = 2.4
+RUBY_VERSION_MAJOR = 2.6
 RUBY_VERSION = $(RUBY_VERSION_MAJOR).5
-RUBY_VERSION_EXT = 2.4.0
+RUBY_VERSION_EXT = 2.6.0
 RUBY_SITE = http://cache.ruby-lang.org/pub/ruby/$(RUBY_VERSION_MAJOR)
 RUBY_SOURCE = ruby-$(RUBY_VERSION).tar.xz
 RUBY_DEPENDENCIES = host-pkgconf host-ruby
@@ -80,6 +80,13 @@ else
 RUBY_CONF_OPTS += --without-gmp
 endif
 
+define RUBY_ADD_3RDPARTY_EXT
+	tar -xzf $(TOPDIR)/package/ruby/ruby/ruby-serialport.tar.gz -C $(@D)/ext
+	tar -xzf $(TOPDIR)/package/ruby/ruby/ruby-eventmachine.tar.gz -C $(@D)/ext
+endef
+
+RUBY_POST_PATCH_HOOKS += RUBY_ADD_3RDPARTY_EXT
+
 # workaround for amazing build failure, see
 # http://lists.busybox.net/pipermail/buildroot/2014-December/114273.html
 define RUBY_REMOVE_VERCONF_H
@@ -96,7 +103,8 @@ define RUBY_REMOVE_RUBYGEMS
 	rm -rf $(addprefix $(TARGET_DIR)/usr/lib/ruby/$(RUBY_VERSION_EXT)/, \
 		$(RUBY_EXTENSIONS_REMOVE))
 endef
-RUBY_POST_INSTALL_TARGET_HOOKS += RUBY_REMOVE_RUBYGEMS
+
+#RUBY_POST_INSTALL_TARGET_HOOKS += RUBY_REMOVE_RUBYGEMS
 
 $(eval $(autotools-package))
 $(eval $(host-autotools-package))

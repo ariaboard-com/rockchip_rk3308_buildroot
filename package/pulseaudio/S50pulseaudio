@@ -3,6 +3,7 @@
 # Starts pulseaudio.
 #
 
+export HOME=/root
 
 start() {
 	printf "Starting pulseaudio: "

@@ -1,0 +1,4 @@
+config BR2_PACKAGE_PYTHON_ASCLEPIUS
+	bool "python-asclepius"
+	help
+	  Asclepius backend library on Python 3.

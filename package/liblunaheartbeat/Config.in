@@ -1,0 +1,8 @@
+config BR2_PACKAGE_LIBLUNAHEARTBEAT
+	bool "liblunaheartbeat"
+	select BR2_PACKAGE_LIBGLIB2
+	help
+	  Luna Heartbeat Library for Luna/Pudge project.
+	  https://git.g77k.com
+
+comment "liblunaheartbeat needs a toolchain w/ C++, threads"

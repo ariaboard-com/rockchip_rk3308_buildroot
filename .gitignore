@@ -1,5 +1,6 @@
 /output
 /dl
+/download
 /.auto.deps
 /.config.cmd
 /.config.old
@@ -13,3 +14,4 @@
 *.rej
 *~
 *.pyc
+/board/rockchip/rk3308/fs-overlay/lib/modules

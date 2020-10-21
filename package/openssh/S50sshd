@@ -10,7 +10,7 @@ umask 077
 
 start() {
 	# Create any missing keys
-	/usr/bin/ssh-keygen -A
+	/usr/bin/ssh-keygen -A -f /var/lib/userdata
 
 	printf "Starting sshd: "
 	/usr/sbin/sshd

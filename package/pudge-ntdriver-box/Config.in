@@ -1,0 +1,9 @@
+config BR2_PACKAGE_PUDGE_NTDRIVER_BOX
+	bool "Pudge NTDriver Box GUI"
+	select BR2_PACKAGE_LIBPUDGE
+	select BR2_PACKAGE_QT5BASE
+	select BR2_PACKAGE_QT5BASE_GUI
+	help
+          GUI for pudge ntdriver box.
+          https://git.g77k.com
+

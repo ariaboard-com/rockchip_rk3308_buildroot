@@ -1,0 +1,22 @@
+config BR2_PACKAGE_FONTS_NOTO_CJK
+	bool "\"No Tofu\" font families with large Unicode coverage (CJK)"
+	help
+	  Noto is a collection of font families, each visually harmonized across scripts.
+	
+	  This package contains Noto font families for Traditional Chinese, Simplified Chinese, Japanese and Korean:
+
+	   * Noto Sans CJK JP
+	   * Noto Sans CJK KR
+	   * Noto Sans CJK SC
+	   * Noto Sans CJK TC
+	   * Noto Sans Mono CJK JP
+	   * Noto Sans Mono CJK KR
+	   * Noto Sans Mono CJK SC
+	   * Noto Sans Mono CJK TC
+	
+	  These fonts are derived from the font family Source Han Sans.
+	
+	  The name "Noto" is short for "No Tofu", describing the aim of covering all living Unicode scripts.
+	
+	  Tofu (豆腐) is Japanese jargon for unicode replacement character "�" (U+FFFD) often displayed as replacement for unassigned or unknown characters. 
+

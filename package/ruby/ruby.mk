@@ -80,13 +80,6 @@ else
 RUBY_CONF_OPTS += --without-gmp
 endif
 
-define RUBY_ADD_3RDPARTY_EXT
-	tar -xzf $(TOPDIR)/package/ruby/ruby/ruby-serialport.tar.gz -C $(@D)/ext
-	tar -xzf $(TOPDIR)/package/ruby/ruby/ruby-eventmachine.tar.gz -C $(@D)/ext
-endef
-
-RUBY_POST_PATCH_HOOKS += RUBY_ADD_3RDPARTY_EXT
-
 # workaround for amazing build failure, see
 # http://lists.busybox.net/pipermail/buildroot/2014-December/114273.html
 define RUBY_REMOVE_VERCONF_H
